@@ -1,7 +1,7 @@
 const nameInput = document.querySelector('#name-input');
 const nameOutput = document.querySelector('#name-output');
 
-nameInput.addEventName('input', () => {
+nameInput.addEventListener('input', () => {
   const trimValue = nameInput.value.trim();
 
   if (trimValue === '') {
