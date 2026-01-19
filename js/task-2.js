@@ -24,3 +24,32 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+
+// const image = document.createElement("img");
+
+// image.src = "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260";
+// image.alt = "White and Black Long Fur Cat";
+// console.log(image);
+
+
+// const imageOne = document.createElement("img");
+
+// image.src = "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?dpr=2&h=750&w=1260";
+// image.alt = "Orange and White Koi Fish Near Yellow Koi Fish";
+// console.log(imageOne);
+
+const gallery = document.querySelector('.gallery');
+
+const galleryItems = images.map(({ url, alt }) => {
+  const li = document.createElement('li');
+  const img = document.createElement('img');
+
+  img.src = url;
+  img.alt = alt;
+
+  li.append(img);
+  return li;
+});
+
+gallery.append(...galleryItems);
